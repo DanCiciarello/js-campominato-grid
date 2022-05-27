@@ -1,0 +1,29 @@
+/* Variables */
+:root {
+    
+}
+
+/* Generals */
+
+header {
+    background-color: #ffffff;
+}
+
+header img {
+    padding-right: 10px;
+}
+
+body {
+    background-color: #9EFDD5;
+}
+
+footer {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* Grid */
