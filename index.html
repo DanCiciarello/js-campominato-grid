@@ -25,7 +25,9 @@
                 
                 <!-- Select level -->
                 <div class="col-6 d-flex align-items-center justify-content-end py-3">
-                    <span>Difficoltà</span>
+                    <span style="padding-right: 20px;">Difficoltà</span>
+                    <input type="text" class="form-control ml-2" id="userInputLevel" placeholder="Inserisci un livello di difficoltà tra 1, 2 o 3">
+                    <button class="btn btn-primary" id="generateBtn" style="margin-left: 20px;">Conferma</button>
                 </div>
             </div>
         </div>
@@ -36,9 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="grid">
-                        
-                    </div>
+                    <div class="d-flex flex-wrap m-auto" id="grid"></div>
                 </div>
             </div>
         </div>

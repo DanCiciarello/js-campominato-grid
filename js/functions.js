@@ -27,28 +27,42 @@ function generateNumArray(min, max) {
 /* Genera una griglia con una larghezza, una altezza
 e un array di numeri da stampare all'interno di ogni cella */
 
-let gridElement = document.querySelector("grid");
+const gridElement = document.getElementById("grid");
 
 function generateGrid(sideX, sideY) {
 
-    /* Idea:
-    Moltiplico il num x e il num y
-    Uso il risultato come num max da usare nella funzione sopra
-    Ciclo l'array per generare ogni cella
-    Ci stampo dentro l'indice
-    Aggiungo l'event listener al click */
+    // Resetto tutti i child precedenti
+    gridElement.innerHTML = "";
 
-    // Calcolo la larghezza della griglia nel dom
-    gridElement.style.width = `50px * ${sideX}`;
+    // Imposto la larghezza della griglia nel dom
+    gridElement.style.width = `calc(var(--squareWidth) * ${sideX})`;
 
-    // Calcolo il numero totale di celle della griglia
+    // Calcolo il numero totale di quadrati della griglia
     let numMax = sideX * sideY;
 
-    // Calcolo l'array di celle totali che avrà la griglia
+    // Calcolo l'array di numeri totali che avrà la griglia
     let totalCells = generateNumArray(1, numMax);
 
-    // Creo tutte le celle ciclando l'array generato
+    // Creo tutti i quadrati ciclando l'array generato
+    for (n = 1; n <= numMax; n++) {
+
+        // Creo l'elemento del quadrato
+        let square = document.createElement("div");
+
+        // Assegno la classe specifica
+        square.classList.add("square");
+
+        // Stampo dentro il numero incrementale
+        square.innerHTML = `${n}`;
+
+        // Aggiungo l'event listener al click
+        square.addEventListener("click",function(){
+            this.classList.add("cdBlueBg");
+        })
+
+        // Aggiungo l'elemento al dom
+        gridElement.appendChild(square);
+
+    }
 
 };
-
-console.log(generateGrid(10,10));

@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    
+    --squareWidth: 60px;
 }
 
 /* Generals */
@@ -17,12 +17,25 @@ body {
     background-color: #9EFDD5;
 }
 
+main {
+    padding: 100px 0;
+}
+
+.square {
+    width: 60px;
+    aspect-ratio: 1;
+    border: 1px solid #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cdBlueBg {
+    background-color: #6E94EA;
+}
+
 footer {
     background-color: #ffffff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 

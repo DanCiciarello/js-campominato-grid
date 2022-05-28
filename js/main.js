@@ -16,3 +16,27 @@ con difficoltà 3 => tra 1 e 49
 Quando l’utente clicca su ogni cella,
 la cella cliccata si colora di azzurro.
 */
+
+/* ------------------------------------------ */
+
+// Recupero gli elementi dal dom
+let userInputLevelElement = document.getElementById("userInputLevel");
+let generateBtnElement = document.getElementById("generateBtn");
+
+// Aggiungo un event listener al tasto Conferma
+generateBtnElement.addEventListener("click", function(){
+
+    // Recupero il livello inserito dall'utente
+    let userInputLevel = parseInt(userInputLevelElement.value);
+
+    // In base al livello inserito genero una griglia diversa
+    if (userInputLevel == 1) {
+        generateGrid(10,10);
+    } else if (userInputLevel == 2) {
+        generateGrid(9,9);
+    } else if (userInputLevel == 3) {
+        generateGrid(7,7);
+    } 
+
+})
+
